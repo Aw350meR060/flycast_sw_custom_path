@@ -149,7 +149,7 @@ std::string find_user_data_dir()
 {
 #ifdef __SWITCH__
 	flycast::mkdir("/emulators/flycast/data", 0755);
-	return "/emulators/lycast/data/";
+	return "/emulators/flycast/data/";
 #else
 	std::string xdg_home;
 	if (nowide::getenv("XDG_DATA_HOME") != nullptr)
