@@ -148,8 +148,8 @@ std::string find_user_config_dir()
 std::string find_user_data_dir()
 {
 #ifdef __SWITCH__
-	flycast::mkdir("/emulators/flycast/data", 0755);
-	return "/emulators/flycast/data";
+	flycast::mkdir("/emulators/flycast/data/", 0755);
+	return "/emulators/flycast/data/";
 #else
 	std::string xdg_home;
 	if (nowide::getenv("XDG_DATA_HOME") != nullptr)
@@ -173,7 +173,7 @@ std::string find_user_data_dir()
 		return fullpath;
 	}
 	// Unable to detect data dir, use the current folder
-	return "/emulators/flycast/data";
+	return "/emulators/flycast/data/";
 #endif
 }
 
@@ -257,7 +257,7 @@ std::vector<std::string> find_system_data_dirs()
 	std::vector<std::string> dirs;
 
 #ifdef __SWITCH__
-	dirs.push_back("/emulators/flycast/data");
+	dirs.push_back("/emulators/flycast/data/");
 #else
 	std::string xdg_home;
 	if (nowide::getenv("XDG_DATA_HOME") != nullptr)
