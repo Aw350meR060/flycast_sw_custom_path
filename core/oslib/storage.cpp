@@ -340,7 +340,7 @@ std::string AllStorage::getDefaultDirectory()
 		directory += nowide::getenv("HOMEPATH");
 	}
 #elif defined(__SWITCH__)
-	directory = "/";
+	directory = "/emulators/";
 #endif
 	if (directory.empty())
 	{
