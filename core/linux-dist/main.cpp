@@ -173,7 +173,7 @@ std::string find_user_data_dir()
 		return fullpath;
 	}
 	// Unable to detect data dir, use the current folder
-	return ".";
+	return "/emulators/flycast/data";
 #endif
 }
 
